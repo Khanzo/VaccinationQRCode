@@ -1,6 +1,6 @@
 class Strings {
   static const errorUrl = 'Код не ведет на gosuslugi.ru';
-  static const verifyUrl = 'https://www.gosuslugi.ru/covid-cert/verify/';
+  static const verifyUrl = 'https://www.gosuslugi.ru/covid-cert/';
   static const mainTitle = 'Vaccination QRCode';
   static const readQR = 'Наведите на QR-код';
   static const loading = 'загрузка...';
