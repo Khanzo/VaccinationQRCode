@@ -55,18 +55,18 @@ class _MyAppState extends State<MyApp> {
                   decoration:
                   BoxDecoration(border: Border.all(color: Colors.blueAccent)),
                   child: InAppWebView(
-                      initialUrl: url,
+                      initialUrlRequest: URLRequest(url: Uri.parse(url)),
                       initialOptions: InAppWebViewGroupOptions(
-                          crossPlatform: InAppWebViewOptions(
-                            debuggingEnabled: true,
-                          )
+                        android: AndroidInAppWebViewOptions(
+                          useHybridComposition: true,
+                        ),
                       ),
                       onWebViewCreated: (InAppWebViewController controller) {
                         _webViewController = controller;
                       },
-                      onLoadStop: (InAppWebViewController controller, String url) async {
+                      onLoadStop: (controller, url) async {
                         setState(() {
-                          this.url = url;
+                          this.url = url.toString();
                         });
                       },
                       onProgressChanged: (InAppWebViewController controller, int progress) {
