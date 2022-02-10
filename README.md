@@ -1,5 +1,5 @@
 # VaccinationQRCode
-Flutter 1.22.6
+Flutter 2.8
 
 Flutter проект для проверки кодов вакцинации.
 
